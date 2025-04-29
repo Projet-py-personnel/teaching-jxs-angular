@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './my-component.component.css'
 })
 export class MyComponentComponent {
+    id: string = '';
 
+    constructor(){
+    }
+
+    ngOnInit(): void {
+
+    }
 }
