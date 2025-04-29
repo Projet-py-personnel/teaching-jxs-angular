@@ -1,18 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Pokemon } from '../pokemon';
 
 @Component({
   selector: 'app-my-component',
   standalone: false,
   templateUrl: './my-component.component.html',
-  styleUrl: './my-component.component.css'
+  styleUrls: ['./my-component.component.css']
 })
-export class MyComponentComponent {
-    id: string = '';
+export class MyComponentComponent implements OnInit {
+  id: string = '';
+  selectedPokeId: string = '';
 
-    constructor(){
-    }
+  pokes: Pokemon[] = [];
 
-    ngOnInit(): void {
+  constructor() {
+    this.pokes.push(new Pokemon('1', 'Pikachu'));
+    this.pokes.push(new Pokemon('2', 'baseurl'));
+    this.pokes.push(new Pokemon('3', 'saurian'));
+    this.pokes.push(new Pokemon('4', 'venturous'));
+    this.pokes.push(new Pokemon('5', 'chandler'));
+  }
 
-    }
+  ngOnInit(): void {}
 }
