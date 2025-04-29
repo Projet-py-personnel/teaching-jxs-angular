@@ -10,6 +10,7 @@ import { Pokemon } from '../pokemon';
 export class MyComponentComponent implements OnInit {
   id: string = '';
   selectedPokeId: string = '';
+  searchPokeName: string = '';
 
   pokes: Pokemon[] = [];
 
